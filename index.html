@@ -42,12 +42,12 @@
     <meta name="twitter:domain" content="https://www.aia.com.sg/en/index.html"/>                        
     <meta name="twitter:card" content="summary_large_image"/>                        
     <meta name="facebook-domain-verification" content="m3wja2lwjkfucig2he21b09v7givu4"/>
-<link href="header.css" rel="stylesheet" type="text/css">
-<!-- <link href="styles.css" rel="stylesheet" type="text/css">   -->
-<script src="header.js"></script>
+    <link href="header.css" rel="stylesheet" type="text/css">
+    <!-- <link href="styles.css" rel="stylesheet" type="text/css">   -->
+    <script src="header.js"></script>
 
     <title>AIA Insurance - Life Insurance, Savings, Investment | AIA Singapore</title>
-                    <script type="text/javascript" src="//assets.adobedtm.com/e17df9099c11/76dd46f4f136/launch-a786f5318308.min.js" async></script>
+    <script type="text/javascript" src="//assets.adobedtm.com/e17df9099c11/76dd46f4f136/launch-a786f5318308.min.js" async></script>
                     
 </head>
 
@@ -2182,7 +2182,7 @@
     </div>
     <!-- CAROUSEL BUTTON -->
         <ul data-target="hero-carousel-nav" class="carousel-tab-list tab-count-5">
-            <li class="carousel-tab active">
+            <li class="carousel-tab" onmouseover="currentSlide(1)">
                 <span class="tab-content"> 
                     <h6 class="w title margin-bottom-xxs">
                         Fight The Hike With AIA
@@ -2192,7 +2192,7 @@
                     </p> 
                 </span>
             </li>        
-            <li class="carousel-tab ">
+            <li class="carousel-tab" onmouseover="currentSlide(2)">
                 <span class="tab-content"> 
                     <h6 class="w title margin-bottom-xxs">
                         AIA Vitality Turns 9!
@@ -2202,7 +2202,7 @@
                     </p> 
                 </span>
             </li>        
-            <li class="carousel-tab ">
+            <li class="carousel-tab" onmouseover="currentSlide(1)">
                 <span class="tab-content"> 
                     <h6 class="w title margin-bottom-xxs">
                         AIA Dengue Cover
@@ -2212,7 +2212,7 @@
                     </p> 
                 </span>
             </li>
-            <li class="carousel-tab ">
+            <li class="carousel-tab" onmouseover="currentSlide(1)">
                 <span class="tab-content"> 
                     <h6 class="w title margin-bottom-xxs">
                         WEALTHBEING BY AIA
@@ -2235,6 +2235,33 @@
         </ul>
 </div>
 <!-- END CAROUSEL -->
+
+<script type="text/javascript">
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("hero-carousel");
+    let dots = document.getElementsByClassName("carousel-tab");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+
+</script>
 </div>
 
 <div>

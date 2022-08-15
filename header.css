@@ -1305,7 +1305,7 @@ tbody.collapse.in{display:table-row-group}
 .hero-carousel .slide-container .slide-content.grid-content .row .slide-column .carousel-actions .button-container{padding-left:28px;padding-right:28px}
 @media(min-width:768px){.hero-carousel .slide-container .slide-content.grid-content .row .slide-column .carousel-actions .button-container{padding:0}
 }
-.carousel-tab-list{display:none;padding:0;position:absolute;z-index:30;width:100%}
+.carousel-tab-list{display:none;padding:0;position:absolute;z-index:100;width:100%}
 @media(min-width:1200px){.carousel-tab-list{display:block;top:520px}
 }
 .carousel-tab-list .carousel-tab{float:left;display:inline-block;width:25%;height:80px;background-color:rgba(0,0,0,0.2);list-style-type:none;text-align:center;cursor:pointer;transition:all .0625s linear}
