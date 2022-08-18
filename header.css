@@ -1403,17 +1403,30 @@ tbody.collapse.in{display:table-row-group}
 .navbar:after{clear:both}
 @media(min-width:1025px){.navbar .hide-sd-up{display:none !important}
 }
+
 .navbar .dropdown-notifications{display:none}
 .navbar.logged-in .dropdown-notifications{display:block}
 .navbar-fixed{position:fixed;right:0;left:0;top:0}
 .navbar-fixed-slim .navbar-slim{visibility:visible;opacity:1;filter:alpha(opacity=100)}
-.navbar-slim{position:absolute;left:0;right:0;bottom:0;height:24px;background-color:#d31145;visibility:hidden;opacity:0;filter:alpha(opacity=0);z-index:1000;transition:opacity .25s ease-in-out;-moz-transition:opacity .25s ease-in-out;-webkit-transition:opacity .25s ease-in-out}
-.navbar-slim .navbar-title-slim{color:#fff;font-family:"AIATitle","Calibri",sans-serif;font-size:24px;font-weight:normal;line-height:24px;text-align:center;text-transform:uppercase}
+.navbar-slim{
+    position:absolute;
+    left:0;right:0;bottom:0;height:24px;
+    background-color:#d31145;
+    visibility:hidden;
+    opacity:0;filter:alpha(opacity=0);
+    z-index:1000;transition:opacity .25s ease-in-out;
+    -moz-transition:opacity .25s ease-in-out;-webkit-transition:opacity .25s ease-in-out}
+.navbar-slim .navbar-title-slim{
+    color:#fff;font-family:"AIATitle","Calibri",sans-serif;
+    font-size:24px;font-weight:normal;
+    line-height:24px;text-align:center;
+    text-transform:uppercase}
 .navbar-offset-xs{top:-36px}
 .navbar-offset-sm{top:-56px}
 .navbar-offset-sd{top:-64px}
 .navbar-offset-sd-zero{top:-96px}
 .navbar-fixed-spacer{padding-top:60px}
+
 @media(min-width:768px){.navbar-fixed-spacer{padding-top:80px}
 }
 @media(min-width:1025px){.navbar-fixed-spacer{padding-top:88px}
@@ -1425,7 +1438,7 @@ tbody.collapse.in{display:table-row-group}
 }
 .navbar-brand{position:absolute;left:100px;right:100px;padding-top:14px;padding-bottom:14px;color:#fff;text-decoration:none;text-align:center}
 .navbar-brand>.icon-s{vertical-align:bottom}
-.navbar-brand .navbar-brand-img{height:44px}
+.navbar-brand .navbar-brand-img{height:40px}
 @media(min-width:768px){.navbar-brand{padding-top:18px;padding-bottom:18px}
 }
 @media(min-width:1025px){.navbar-brand{left:48px;right:auto;padding-top:22px;padding-bottom:22px;text-align:left}
