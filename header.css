@@ -1247,6 +1247,9 @@ tbody.collapse.in{display:table-row-group}
 }
 @media(min-width:1200px){.hero-carousel{margin-bottom:0}
 }
+.dot{
+font-weight: bold;
+}
 .hero-carousel .slide-container{position:relative}
 .hero-carousel .slide-container .slide-content{height:100%;position:relative;z-index:40;color:#fff;padding-top:96px;padding-bottom:96px}
 .hero-carousel .slide-container .slide-content .margin-top-abs-xxl{position:absolute;top:60px;left:0;right:0}
