@@ -39,6 +39,7 @@
     <link href="header.css" rel="stylesheet" type="text/css">
     <script src="header.js"></script>
     <script src="footer.js"></script>
+    <script src="carousel.js"></script>
     <title>AIA Insurance - Life Insurance, Savings, Investment | AIA Singapore</title>
 </head>
 <body>	
@@ -54,7 +55,7 @@
     <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
         <ul class="nav navmenu-nav navmenu-search-button border-bottom-dark border-top-dark">
             <li>
-                <a href="/en/search.html" class="clearfix">
+                <!-- <a href="/en/search.html" class="clearfix">
                     <svg class="icon-xs hide-on-fallback" role="img" title="icon-search-nav">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink"
                             xlink:href="/content/dam/aia/icons/icons.svg#search-nav"></use>
@@ -62,7 +63,16 @@
                             xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image>
                     </svg>
                     <span class="h5 w">Search</span>
-                </a>
+                </a> -->
+                <a data-savepage-href="/en/search.html" href="https://www.aia.com.sg/en/search.html" class="clearfix">
+                    <svg class="icon-xs hide-on-fallback" role="img" title="icon-search-nav">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" data-savepage-href="/content/dam/aia/icons/icons.svg#search-nav" href="#search-nav"></use><!--savepage-symbol-insert--><symbol id="search-nav" viewBox="0 0 64 64">
+                <path fill="#fff" d="M28.907 47.12c-10.053 0-18.24-8.16-18.24-18.213s8.187-18.24 18.24-18.24 18.24 8.187 18.24 18.24S38.96 47.12 28.907 47.12zm0-31.067c-7.093 0-12.853 5.76-12.853 12.853s5.76 12.853 12.853 12.853 12.853-5.76 12.853-12.853-5.787-12.853-12.853-12.853zM43.587 38.075l9.749 9.749L48 53.16l-9.749-9.749 5.336-5.336z"></path>
+            </symbol>
+                      <image class="icon icon-xs " src="/content/dam/aia/icons/navigation/search-nav.png" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image>
+                    </svg>
+                    <span class="h5 w">Search</span>
+                  </a>
             </li>
         </ul>
         <ul class="nav navmenu-nav" data-user-menu="individual">
@@ -1921,83 +1931,90 @@
                 <li class="dropdown navbar-search-btn hidden-below-sd" tabindex="9800">
                     <div class="dropdown-toggle" data-toggle="dropdown">
                         <div class="navbar-tool-label">
-                            <svg title="Contact Us" class="icon icon-xs hide-on-fallback " role="img" alt="Contact Us">
+                            <svg title="Search" class="icon icon-xs hide-on-fallback " role="img" alt="Search">
                                 <g>
-                                    <title>Contact Us</title>
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        data-savepage-href="/content/dam/aia/icons/icons.svg#contact-nav"
-                                        href="#contact-nav"></use>
+                                    <title>Search</title>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" data-savepage-href="/content/dam/aia/icons/icons.svg#search-nav" href="#search-nav"></use>
                                     <!--savepage-symbol-insert-->
-                                    <symbol id="contact-nav" viewBox="0 0 64 64">
-                                        <path fill="#fff"
-                                            d="M42.693 34.16l-7.707 7.707-13.573-13.573 7.707-7.707L18.373 9.84l-3.493 3.493c-5.44 5.44-5.44 14.293 0 19.733l16.587 16.427c5.467 4.32 13.44 3.973 18.507-1.093l3.493-3.493L42.694 34.16z">
+                                    <symbol id="search-nav" viewBox="0 0 64 64">
+                                        <path fill="#fff" d="M28.907 47.12c-10.053 0-18.24-8.16-18.24-18.213s8.187-18.24 18.24-18.24 18.24 8.187 18.24 18.24S38.96 47.12 28.907 47.12zm0-31.067c-7.093 0-12.853 5.76-12.853 12.853s5.76 12.853 12.853 12.853 12.853-5.76 12.853-12.853-5.787-12.853-12.853-12.853zM43.587 38.075l9.749 9.749L48 53.16l-9.749-9.749 5.336-5.336z">
                                         </path>
                                     </symbol>
-                                    <image class="icon icon-xs " src="/content/dam/aia/icons/navigation/contact-nav.png"
-                                        alt="Contact Us" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="">
-                                    </image>
+                                    <image class="icon icon-xs " src="/content/dam/aia/icons/navigation/search-nav.png" alt="Search" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image>
                                 </g>
-                            </svg>
+                            </svg>            
                         </div>
                     </div>
                     <ul class="dropdown-menu search-dropdown-menu">
                         <li class="search-bar">
                             <form class="search-form" id="search-form1">
-                                <input type="hidden" name="searchExecutor" value="/en/search" id="searchExecutor" />
-                                <input type="hidden" name="type" value="123" id="search_type" />
+                                <input type="hidden" name="searchExecutor" value="/en/search" id="searchExecutor">
+                                <input type="hidden" name="type" value="123" id="search_type">
                                 <!--*/ end, by Ocean Lan */-->
                                 <div class="search-col-left">
                                     <input name="keyword" data-id="search-input" class="search-input" type="search"
                                         placeholder="Type Keywords" tabindex="9801"
-                                        data-search-options="{&#34;hideAllFilter&#34;:false,&#34;hideProductsFilter&#34;:false,&#34;hideArticlesFilter&#34;:false,&#34;hideFormsFilter&#34;:false}" />
+                                        data-search-options="{&quot;hideAllFilter&quot;:false,&quot;hideProductsFilter&quot;:false,&quot;hideArticlesFilter&quot;:false,&quot;hideFormsFilter&quot;:false}"
+                                        autocomplete="off" value="">
                                 </div>
                                 <div class="search-col-right">
                                     <button class="btn btn-primary go-btn" tabindex="9802">Go</button>
                                     <button class="btn dismiss-search-btn" tabindex="9803">
-                                        <svg title='Dismiss' class="icon icon-xs hide-on-fallback " role="img">
+                                        <svg title="Dismiss" class="icon icon-xs hide-on-fallback " role="img">
                                             <g>
                                                 <title>Dismiss</title>
                                                 <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                    xlink:href="/content/dam/aia/icons/icons.svg#closewhite-glyph">
-                                                </use>
-                                                <image class="icon icon-xs "
-                                                    src="/content/dam/aia/icons/glyph/closewhite-glyph.png"
-                                                    alt="undefined" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                    xlink:href=""></image>
+                                                    data-savepage-href="/content/dam/aia/icons/icons.svg#closewhite-glyph"
+                                                    href="#closewhite-glyph"></use>
+                                                <!--savepage-symbol-insert-->
+                                                <symbol id="closewhite-glyph" viewBox="0 0 64 64">
+                                                    <path fill="#fff"
+                                                        d="M32 36.72l16.56 16.613 4.773-4.72L32 27.28 10.667 48.613l4.773 4.72z">
+                                                    </path>
+                                                    <path fill="#fff"
+                                                        d="M32 27.28L15.44 10.667l-4.773 4.72L32 36.72l21.333-21.333-4.773-4.72z">
+                                                    </path>
+                                                </symbol>
+                                                <image class="icon icon-xs " src="/content/dam/aia/icons/glyph/closewhite-glyph.png"
+                                                    alt="undefined" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="">
+                                                </image>
                                             </g>
-                                        </svg>
+                                        </svg>            
                                     </button>
                                 </div>
                             </form>
                         </li>
                     </ul>
-                </li>
-                <li class="dropdown" tabindex="9900" data-contact>
+                </li>            
+                <li class="dropdown" tabindex="9900" data-contact="">
                     <div class="dropdown-toggle" data-toggle="dropdown">
                         <div class="navbar-tool-label">
-                            <svg title='Contact Us' class="icon icon-xs hide-on-fallback " role="img" alt="Contact Us">
+                            <svg title="Contact Us" class="icon icon-xs hide-on-fallback " role="img" alt="Contact Us">
                                 <g>
                                     <title>Contact Us</title>
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        xlink:href="/content/dam/aia/icons/icons.svg#contact-nav"></use>
-                                    <image class="icon icon-xs " src="/content/dam/aia/icons/navigation/contact-nav.png"
-                                        alt="Contact Us" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="">
-                                    </image>
+                                        data-savepage-href="/content/dam/aia/icons/icons.svg#contact-nav" href="#contact-nav"></use>
+                                    <!--savepage-symbol-insert-->
+                                    <symbol id="contact-nav" viewBox="0 0 64 64">
+                                        <path fill="#fff" d="M42.693 34.16l-7.707 7.707-13.573-13.573 7.707-7.707L18.373 9.84l-3.493 3.493c-5.44 5.44-5.44 14.293 0 19.733l16.587 16.427c5.467 4.32 13.44 3.973 18.507-1.093l3.493-3.493L42.694 34.16z">
+                                        </path>
+                                    </symbol>
+                                    <image class="icon icon-xs " src="/content/dam/aia/icons/navigation/contact-nav.png" alt="Contact Us" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image>
                                 </g>
                             </svg>
                         </div>
                     </div>
                     <ul class="dropdown-menu contact-dropdown-menu">
                         <li>
-                            <a href="https://outlook.office365.com/owa/calendar/AIACustomerServiceCentre@aiacom.onmicrosoft.com/bookings/"
-                                target="_blank" tabindex="9901">
+                            <a href="https://outlook.office365.com/owa/calendar/AIACustomerServiceCentre@aiacom.onmicrosoft.com/bookings/" target="_blank" tabindex="9901">
                                 <h6 class="p3">Book an Appointment</h6>
                                 <p class="p3 bt5"></p>
                             </a>
                         </li>
                         <li role="separator" class="divider"></li>
                         <li>
-                            <a href="/en/help-support.html" target="_self" tabindex="9902">
+                            <a data-savepage-href="/en/help-support.html" href="https://www.aia.com.sg/en/help-support.html"
+                                target="_self" tabindex="9902">
                                 <h6 class="p3">Contact us</h6>
                                 <p class="p3 bt5"></p>
                             </a>
@@ -2124,7 +2141,7 @@
                   </style>
                 </div>
               </div>
-              <div id="car2" style="background-color: rgb(67, 66, 62); " class="slide-container slide-bg ci-dc ci-tc ci-mc slick-slide" data-target="slide" data-nav-heading="Fight The Hike With AIA" data-nav-subheading="Enjoy rewards, premium discounts or AIA Delights Voucher Credits" tabindex="-1" role="option" aria-describedby="slick-slide00" data-slick-index="0" aria-hidden="true">
+              <div id="car2" style="background-color: rgb(67, 66, 62); width: 1264px" class="slide-container slide-bg ci-dc ci-tc ci-mc slick-slide" data-target="slide" data-nav-heading="Fight The Hike With AIA" data-nav-subheading="Enjoy rewards, premium discounts or AIA Delights Voucher Credits" tabindex="-1" role="option" aria-describedby="slick-slide00" data-slick-index="0" aria-hidden="true">
                 <div class="fightthehike-bg">
                   <div class="slide-content centered-content">
                     <div class="row margin-bottom-m margin-top-md-s retirement-saver fth-flex">
@@ -2190,15 +2207,7 @@
                       }
                       
                     }
-                    @media screen and(max-width:168) {
-                        .fightthehike-bg {
-                        background-image: url("img/desktop-banner.jpg");
-                        background-position: center bottom;
-                        background-size: cover;
-                        height: 100%;
-                        width: 700x;
-                      }  
-                    }
+                    
                     @media (min-width: 768px) and (max-width: 1200px) {
                       .fightthehike-text {
                         padding-left: 50px;
@@ -2657,28 +2666,28 @@
             </div>
           </div>
           <ul class="slick-dots" style role="tablist">
-            <li class="" aria-hidden="true" role="presentation" aria-selected="true" aria-controls="navigation00" id="slick-slide00">
+            <li class="dot" aria-hidden="true" role="presentation" aria-selected="true" aria-controls="navigation00" id="slick-slide00" onmouseover="currentSlide(1)" >
               <button type="button" data-role="none" role="button" aria-required="false" tabindex="0">
                 1
               </button>
             </li>
-            <li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation01" id="slick-slide01" class="">
+            <li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation01" id="slick-slide01" class="dot" onmouseover="currentSlide(2)" >
               <button type="button" data-role="none" role="button" aria-required="false" tabindex="0" >
                 2
               </button>
             </li>
-            <li aria-hidden="false" role="presentation" aria-selected="false" aria-controls="navigation02" id="slick-slide02" class="slick-active">
+            <li aria-hidden="false" role="presentation" aria-selected="false" aria-controls="navigation02" id="slick-slide02" class="dot" onmouseover="currentSlide(3)" >
               <button type="button" data-role="none" role="button" aria-required="false" tabindex="0" >
                 3
               </button>
             </li>
-            <li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation03" id="slick-slide03" class="">
+            <li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation03" id="slick-slide03" class="dot" onmouseover="currentSlide(4)" >
               <button type="button" data-role="none" role="button" aria-required="false" tabindex="0">
                 4
               </button>
             </li>
-            <li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation04" id="slick-slide04" class="">
-              <button type="button" data-role="none" role="button" aria-required="false" tabindex="0" >
+            <li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation04" id="slick-slide04" class="dot" onmouseover="currentSlide(5)">
+              <button type="button" data-role="none" role="button" aria-required="false" tabindex="0">
                 5
               </button>
             </li>
@@ -2726,49 +2735,6 @@
           </li>
         </ul>
       </div>
-<script type="text/javascript">
-    // const tab = document.querySelectorAll(".carousel-tab");
-    // const slt = document.querySelector(".slick-track");
-    // console.log(slt)
-    //     tab.forEach(element => {
-    //         element.addEventListener("mouseover", (event) =>{
-    //         tab.forEach(item =>{
-    //             if(item!=element){
-    //             item.classList.remove('active')
-    //             }else{
-    //             element.classList.add('active')
-    //             let att = element.attributes[1].value
-    //                 slt.style = 'opacity: 1; width: 6320px; transform: translate3d( '+ -(att*1264) +'px, 0px, 0px);';        
-    //             }       
-    //         })
-    //         })
-    //     });
-      let slideIndex = 1;
-      showSlides(slideIndex);
-    
-      // Thumbnail image controls
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-    
-      function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("slide-container");
-        console.log(slides)
-        let dots = document.getElementsByClassName("carousel-tab");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-      }
-
-    </script>
 </div>
 <!-- END CAROUSEL -->
 <div>
