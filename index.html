@@ -2053,7 +2053,7 @@
     <div class="carousel-container">
         <div class="hero-carousel slick-initialized slick-slider" data-target="hero-carousel" data-slick='{"autoplaySpeed":5500,"autoplay":true,"initialSlide":0,"pauseOnHover":true,"pauseOnDotsHover":true}' role="toolbar">
           <div aria-live="polite" class="slick-list draggable">
-            <div class="slick-track" role="listbox" style="opacity: 1; width: 8848px; transform: translate3d(-3792px, 0px, 0px);">
+            <div class="slick-track" role="listbox" style="opacity: 1; width: 8848px;">
               <div id="car1" style="background-color: rgb(111, 110, 104); width: 1264px" class="slide-container slide-bg ci-dc ci-tc ci-mc slick-slide slick-cloned" data-target="slide" data-nav-heading="AIA Financial Associate Scheme" data-nav-subheading="Join us as an insurance representative" tabindex="-1" role="option" aria-describedby="slick-slide04" data-slick-index="-1" id="" aria-hidden="true">
                 <div class="careers-fas-bg">
                   <div class="slide-content centered-content">
@@ -2124,7 +2124,7 @@
                   </style>
                 </div>
               </div>
-              <div id="car2" style="background-color: rgb(67, 66, 62); width: 1264px" class="slide-container slide-bg ci-dc ci-tc ci-mc slick-slide" data-target="slide" data-nav-heading="Fight The Hike With AIA" data-nav-subheading="Enjoy rewards, premium discounts or AIA Delights Voucher Credits" tabindex="-1" role="option" aria-describedby="slick-slide00" data-slick-index="0" aria-hidden="true">
+              <div id="car2" style="background-color: rgb(67, 66, 62); " class="slide-container slide-bg ci-dc ci-tc ci-mc slick-slide" data-target="slide" data-nav-heading="Fight The Hike With AIA" data-nav-subheading="Enjoy rewards, premium discounts or AIA Delights Voucher Credits" tabindex="-1" role="option" aria-describedby="slick-slide00" data-slick-index="0" aria-hidden="true">
                 <div class="fightthehike-bg">
                   <div class="slide-content centered-content">
                     <div class="row margin-bottom-m margin-top-md-s retirement-saver fth-flex">
@@ -2164,6 +2164,7 @@
                     @media (min-width: 320px) {
                       .fightthehike-title {
                         font-size: 38px;
+                        
                       }
                     }
                     @media (min-width: 360px) {
@@ -2182,10 +2183,21 @@
                         background-position: center bottom;
                         background-size: cover;
                         height: 100%;
+                        
                       }
                       .fightthehike-text {
                         font-size: 18px;
                       }
+                      
+                    }
+                    @media screen and(max-width:168) {
+                        .fightthehike-bg {
+                        background-image: url("img/desktop-banner.jpg");
+                        background-position: center bottom;
+                        background-size: cover;
+                        height: 100%;
+                        width: 700x;
+                      }  
                     }
                     @media (min-width: 768px) and (max-width: 1200px) {
                       .fightthehike-text {
@@ -2261,6 +2273,7 @@
                       }
                       .aiafunds {
                         height: 100%;
+                        width: 100%;
                         background-position-x: center;
                         background-image: url("img/aia-vitality-anniversary-desktop.jpg");
                         background-size: cover;
@@ -2673,7 +2686,7 @@
         </div>
   
         <ul data-target="hero-carousel-nav" class="carousel-tab-list tab-count-5">
-          <li class="carousel-tab dot" data-tab-index="1">
+          <li class="carousel-tab" onmouseover="currentSlide(1)" data-tab-index="1">
             <span class="tab-content">
               <h6 class="w title margin-bottom-xxs">Fight The Hike With AIA</h6>
               <p class="bt5 w">
@@ -2682,28 +2695,28 @@
             </span>
           </li>
   
-          <li class="carousel-tab dot" data-tab-index="2">
+          <li class="carousel-tab" onmouseover="currentSlide(2)" data-tab-index="2">
             <span class="tab-content">
               <h6 class="w title margin-bottom-xxs">AIA Vitality Turns 9!</h6>
               <p class="bt5 w">Pump up your vitality this July with us!</p>
             </span>
           </li>
   
-          <li class="carousel-tab dot" data-tab-index="3">
+          <li class="carousel-tab" onmouseover="currentSlide(3)" data-tab-index="3">
             <span class="tab-content">
               <h6 class="w title margin-bottom-xxs">AIA Dengue Cover</h6>
               <p class="bt5 w">Be covered against Dengue at no cost</p>
             </span>
           </li>
   
-          <li class="carousel-tab dot" data-tab-index="4">
+          <li class="carousel-tab" onmouseover="currentSlide(4)" data-tab-index="4">
             <span class="tab-content">
               <h6 class="w title margin-bottom-xxs">WEALTHBEING BY AIA</h6>
               <p class="bt5 w">Where wealth and well-being meet</p>
             </span>
           </li>
   
-          <li class="carousel-tab dot"  data-tab-index="5">
+          <li class="carousel-tab" onmouseover="currentSlide(5)" data-tab-index="5">
             <span class="tab-content">
               <h6 class="w title margin-bottom-xxs">
                 AIA Financial Associate Scheme
@@ -2714,45 +2727,46 @@
         </ul>
       </div>
 <script type="text/javascript">
-    const tab = document.querySelectorAll(".carousel-tab");
-    const slt = document.querySelector(".slick-track");
-    console.log(slt)
-        tab.forEach(element => {
-            element.addEventListener("mouseover", (event) =>{
-            tab.forEach(item =>{
-                if(item!=element){
-                item.classList.remove('active')
-                }else{
-                element.classList.add('active')
-                let att = element.attributes[1].value
-                    slt.style = 'opacity: 1; width: 6320px; transform: translate3d( '+ -(att*1264) +'px, 0px, 0px);';        
-                }       
-            })
-            })
-        });
-    //   let slideIndex = 1;
-    //   showSlides(slideIndex);
+    // const tab = document.querySelectorAll(".carousel-tab");
+    // const slt = document.querySelector(".slick-track");
+    // console.log(slt)
+    //     tab.forEach(element => {
+    //         element.addEventListener("mouseover", (event) =>{
+    //         tab.forEach(item =>{
+    //             if(item!=element){
+    //             item.classList.remove('active')
+    //             }else{
+    //             element.classList.add('active')
+    //             let att = element.attributes[1].value
+    //                 slt.style = 'opacity: 1; width: 6320px; transform: translate3d( '+ -(att*1264) +'px, 0px, 0px);';        
+    //             }       
+    //         })
+    //         })
+    //     });
+      let slideIndex = 1;
+      showSlides(slideIndex);
     
-    //   // Thumbnail image controls
-    //   function currentSlide(n) {
-    //     showSlides(slideIndex = n);
-    //   }
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
     
-    //   function showSlides(n) {
-    //     let i;
-    //     let slides = document.getElementsByClassName("carousel-container");
-    //     let dots = document.getElementsByClassName("dot");
-    //     if (n > slides.length) {slideIndex = 1}
-    //     if (n < 1) {slideIndex = slides.length}
-    //     for (i = 0; i < slides.length; i++) {
-    //       slides[i].style.display = "none";
-    //     }
-    //     for (i = 0; i < dots.length; i++) {
-    //       dots[i].className = dots[i].className.replace(" active", "");
-    //     }
-    //     slides[slideIndex-1].style.display = "block";
-    //     dots[slideIndex-1].className += " active";
-    //   }
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide-container");
+        console.log(slides)
+        let dots = document.getElementsByClassName("carousel-tab");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+      }
 
     </script>
 </div>
