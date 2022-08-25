@@ -5,21 +5,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="AIA Singapore provides insurance plans for both individuals and businesses. Learn about life insurance, medical protection, investments and the latest updates!">
     <meta name="format-detection" content="telephone=no">
-    <script type="text/javascript">
-        if (document.addEventListener) {
-            document.addEventListener("DOMContentLoaded", function (event) {
-                var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
-                if (isSafari) {
-                    var svgs = document.getElementsByTagName("svg");
-                    while (svgs.length) {
-                        var svg = svgs[0];
-                        var img = svg.getElementsByTagName("image")[0];
-                        svg.outerHTML = img.outerHTML.replace("image", "img");
-                    }
-                }
-            });
-        }
-    </script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/favicon.ico">
@@ -41,7 +27,7 @@
     <!-- <script src="bootstrap.js"></script> -->
     <script src="header.js"></script>
     <script src="footer.js"></script>
-    <script src="carousel.js"></script>
+    <!-- <script src="carousel.js"></script> -->
     <title>AIA Insurance - Life Insurance, Savings, Investment | AIA Singapore</title>
 </head>
 <body>	
@@ -2193,6 +2179,7 @@
     <!-- <div class="section-container section"> -->
         <div class="container section">
             <div class="row" style="margin-bottom:15px;">
+                <form class="content" id="formDataSubmit">
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div>
                             <div class="card-cal">
@@ -2237,21 +2224,21 @@
                 </div>
                 <div class="col-md-8 col-sm-6 col-xs-12">
                     <div>
-                           <div class="content">
+                           
                                <div id="contentTodo" class="content">
-                                <div >
+                                <div>
                                    <div class="lbl"> Status </div>
-                                        <input type="radio" name="optradio" checked> Important&emsp;&emsp;  
-                                        <input type="radio" name="optradio"> Not Important
+                                        <input type="radio" id="rb1" name="statRadio" value="Important" checked> Important&emsp;&emsp;  
+                                        <input type="radio" id="rb2" name="statRadio" value="Not-Important"> Not Important
                                 </div>
                                 <div> 
                                     <div class="lbl"> Title </div>
-                                        <input type="text" placeholder="Title" aria-label="title" value="" required>
+                                        <input id ="title" type="text" placeholder="Title" aria-label="title" name="title">
                                 </div>
                                 <div class="row" style="margin-left: 1px;"> 
                                     <div class="col-md-2 col-sm-3 col-xs-4" style="padding-left: 1px;padding-bottom: 3px; padding-right: 0;">
                                     <div class="lbl"> Time </div>
-                                        <input type="time" aria-label="time" value="">
+                                        <input type="time" aria-label="time" name="time[]">
                                     </div>
                                     <div class="col-md-8 col-sm-6 col-xs-12" style="padding-left: 1px;padding-bottom: 1px;">
                                     <div class="lbl"> Description </div>
@@ -2260,16 +2247,16 @@
                                             <div class="input-group-append">
                                                 <button id="addBtn" class="btn btn-success addBtn" style="background-color: rgb(32, 160, 0);" type="submit">+</button>
                                             </div>
-                                            
                                           </div>
                                     </div>
                                 </div>
                                 
                                </div>
                                <button class="btn btn-default btn-primary btn-stretch" type="submit" style="width: 450px; margin-top: 20px;" >Create To-Do List</button>
-                           </div>
+                            
                     </div>
                 </div>
+            </form>
             </div>
         </div>
     <!-- </div> -->
@@ -2616,6 +2603,32 @@
                     x--;
                 })
             });
+            $('#formDataSubmit').on('submit', store)
+            function store(e){
+                // var cal = $('#calendar'). datepicker('getDate');
+                // var statValue = document.querySelector('input[name="statRadio"]:checked').value;
+                // var form = localStorage.key;
+                // var title = document.getElementById("title").value;
+                // var k = "The respective values are :";
+                var des  = document.getElementsByName("descTodo[]");
+                
+                // for (var i = 0; i < des.length; i++) {
+                // var a = des[i];
+                // k = k + "descTodo[" + i + "].value= " + a.value + " ";
+            // }
+                e.preventDefault();
+                // const formData = {
+                //     cal: cal,
+                //     statValue: statValue ,
+                //     title: title,
+                //     des: []
+                }
+                // localStorage.setItem(formData,JSON.stringify(formData));
+                
+                console.log(des)
+
+               
+            }
         </script>
 </body>
 </html>   
