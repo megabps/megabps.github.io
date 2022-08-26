@@ -41,7 +41,6 @@
     <!-- <script src="bootstrap.js"></script> -->
     <script src="header.js"></script>
     <script src="footer.js"></script>
-    <script src="carousel.js"></script>
     <title>AIA Insurance - Life Insurance, Savings, Investment | AIA Singapore</title>
 </head>
 <body>	
@@ -2173,6 +2172,7 @@
             <div class="row" style="margin-bottom:15px;">
                 <div class="col-md-12 col-sm-6 col-xs-12">
                     <div>
+                        <div id="coba"></div>
                         <table class="table-responsive">
                             <tr style="font-size: 25px;">
                               <th>Title</th>
@@ -2181,12 +2181,25 @@
                               <th>Action</th>
                             </tr>
                             <tr>
-                              <td>January</td>
-                              <td>$100</td>
-                            </tr>
-                            <tr>
-                              <td>February</td>
-                              <td>$80</td>
+                                <script>
+                                    temp = JSON.parse(localStorage.getItem("dataTotal"))??[];
+                                    var arrTemp =[]
+                                        if(temp.length > 0){ 
+                                            for(var i=0; i<temp.length; i++){
+                                                $('tbody').append(`<tr>
+                                                <td class="Title">${arrTemp.title}</td>
+                                                <td class="Date">${arrTemp.cal}</td>
+                                                </tr>`)
+                                        }}
+                                    //     $.each(todoTable, function(key, value){
+                                    //     $('tbody').append(`<tr>
+                                    //     <td class="Title">${todoTable.title}</td>
+                                    //     <td class="Date">${todoTable.cal}</td>
+                                    //     </tr>`)
+                                    //     console.log(todoTable)
+                                    // });
+                                
+                            </script>
                             </tr>
                           </table>
                     </div>
@@ -2516,28 +2529,6 @@
 <!-- END FOOTER -->
         </div>
         <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-        <script>
-            $(document).ready(function() {
-                var max_fields = 10;
-                var wrapper = document.getElementById("contentTodo");
-                var add_button = document.getElementById("addBtn");
-                var x = 1;
-                $(add_button).click(function(e) {
-                    e.preventDefault();
-                    if (x < max_fields) {
-                        x++;
-                        // $(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="delete">Delete</a></div>'); //add input box
-                        $(wrapper).append('<br><div class="row" style="margin-left: 1px;"> <div class="col-md-2 col-sm-3 col-xs-4" style="padding-left: 1px;padding-bottom: 3px; padding-right: 0;"><input type="time" aria-label="time" value=""></div><div class="col-md-8 col-sm-6 col-xs-12" style="padding-left: 1px;padding-bottom: 1px;"><div class="input-group mb-3"><input type="text" name="descTodo[]" class="form-control descTodo" placeholder="Desc your to-do list"> <div class="input-group-append"><button class="btn btn-success removeBtn" id="removeBtn">-</button></div></div></div></div>');
-                    } else {
-                        alert('You Reached the limits')
-                    }
-                });
-                $(wrapper).on("click", ".removeBtn", function(e) {
-                    e.preventDefault();
-                    $(this).parent('div').remove();
-                    x--;
-                })
-            });
-        </script>
+        
 </body>
 </html>   

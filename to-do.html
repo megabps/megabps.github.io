@@ -27,6 +27,10 @@
     <!-- <script src="bootstrap.js"></script> -->
     <script src="header.js"></script>
     <script src="footer.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/locales/bootstrap-datepicker.nl.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet"/>
     <!-- <script src="carousel.js"></script> -->
     <title>AIA Insurance - Life Insurance, Savings, Investment | AIA Singapore</title>
 </head>
@@ -2190,7 +2194,6 @@
                                     <h5 id="bln-thn"></h5>
                                     <hr style="margin-top: 20px; margin-bottom: 20px;">
                                     <script>
-
                                         const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
                                         const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
                                         const d = new Date();
@@ -2201,22 +2204,14 @@
                                         document.getElementById("hari").innerHTML = hariIni;
                                         document.getElementById("tanggal").innerHTML = tgl;
                                         document.getElementById("bln-thn").innerHTML = bln+" "+thn;
-                                        
-                                        </script>
-                                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-                                    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
-                                    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/locales/bootstrap-datepicker.nl.min.js"></script>
-                                    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet"/>
+                                    </script>
+                                    
                                     
                                     <div id="calendar"></div>  
                                         <script>
-                                        $('#calendar').datepicker({
-                                        language: "en", 
-                                        calendarWeeks: true, 
-                                        todayHighlight: true
-                                        });
+                                        
                                         </script>
-                              
+                                    
                                 </div>
                             </div>
                         </a>
@@ -2238,12 +2233,12 @@
                                 <div class="row" style="margin-left: 1px;"> 
                                     <div class="col-md-2 col-sm-3 col-xs-4" style="padding-left: 1px;padding-bottom: 3px; padding-right: 0;">
                                     <div class="lbl"> Time </div>
-                                        <input type="time" aria-label="time" name="time[]">
+                                        <input type="time" aria-label="time" name="time" id="time" class="time">
                                     </div>
                                     <div class="col-md-8 col-sm-6 col-xs-12" style="padding-left: 1px;padding-bottom: 1px;">
                                     <div class="lbl"> Description </div>
                                         <div class="input-group mb-3">
-                                            <input type="text" name="descTodo[]" class="form-control descTodo" placeholder="Desc your to-do list">                                            
+                                            <input type="text" id="descTodo" name="descTodo" class="form-control descTodo desc" placeholder="Desc your to-do list">                                            
                                             <div class="input-group-append">
                                                 <button id="addBtn" class="btn btn-success addBtn" style="background-color: rgb(32, 160, 0);" type="submit">+</button>
                                             </div>
@@ -2580,7 +2575,6 @@
 </div>
 <!-- END FOOTER -->
         </div>
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
         <script>
             $(document).ready(function() {
                 var max_fields = 10;
@@ -2592,7 +2586,7 @@
                     if (x < max_fields) {
                         x++;
                         // $(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="delete">Delete</a></div>'); //add input box
-                        $(wrapper).append('<br><div class="row" style="margin-left: 1px;"> <div class="col-md-2 col-sm-3 col-xs-4" style="padding-left: 1px;padding-bottom: 3px; padding-right: 0;"><input type="time" aria-label="time" value=""></div><div class="col-md-8 col-sm-6 col-xs-12" style="padding-left: 1px;padding-bottom: 1px;"><div class="input-group mb-3"><input type="text" name="descTodo[]" class="form-control descTodo" placeholder="Desc your to-do list"> <div class="input-group-append"><button class="btn btn-success removeBtn" id="removeBtn">-</button></div></div></div></div>');
+                        $(wrapper).append('<br><div class="row" style="margin-left: 1px;"> <div class="col-md-2 col-sm-3 col-xs-4" style="padding-left: 1px;padding-bottom: 3px; padding-right: 0;"><input type="time" aria-label="time" name="time" id="time" class="time"></div><div class="col-md-8 col-sm-6 col-xs-12" style="padding-left: 1px;padding-bottom: 1px;"><div class="input-group mb-3"><input type="text" id="descTodo" name="descTodo" class="form-control descTodo desc" placeholder="Desc your to-do list"> <div class="input-group-append"><button class="btn btn-success removeBtn" id="removeBtn">-</button></div></div></div></div>');
                     } else {
                         alert('You Reached the limits')
                     }
@@ -2603,31 +2597,41 @@
                     x--;
                 })
             });
+            $('#calendar').datepicker({
+                language: "en",
+                calendarWeeks: true,
+                todayHighlight: true
+            });
             $('#formDataSubmit').on('submit', store)
             function store(e){
-                // var cal = $('#calendar'). datepicker('getDate');
-                // var statValue = document.querySelector('input[name="statRadio"]:checked').value;
-                // var form = localStorage.key;
-                // var title = document.getElementById("title").value;
-                // var k = "The respective values are :";
-                var des  = document.getElementsByName("descTodo[]");
-                
-                // for (var i = 0; i < des.length; i++) {
-                // var a = des[i];
-                // k = k + "descTodo[" + i + "].value= " + a.value + " ";
-            // }
-                e.preventDefault();
-                // const formData = {
-                //     cal: cal,
-                //     statValue: statValue ,
-                //     title: title,
-                //     des: []
-                // }
-                // localStorage.setItem(formData,JSON.stringify(formData));
-                
-                console.log(des)
+                var cal = $('#calendar'). datepicker('getDate');
+                var statValue = document.querySelector('input[name="statRadio"]:checked').value;
+                var form = localStorage.key;
+                var title = document.getElementById("title").value;
+                 var time = $(".time");
+                 var desc = $(".desc");
+                 var arrDesc=[]                
+                 for(var i=0; i<time.length;i++){
+                    arrDesc.push({time: time[i].value, desc: desc[i].value})
+                 }
 
-               
+            //     e.preventDefault();
+            //     const formData = {
+            //         cal: cal,
+            //         statValue: statValue ,
+            //         title: title,
+            //         des:arrDesc
+            //     }
+            //     var temp = JSON.parse(localStorage.getItem("dataTotal"))??[];
+            //     var arrTemp =[]
+            //     if(temp.length > 0){ 
+            //         for(var i=0; i<temp.length; i++){
+            //         arrTemp.push(temp[i])
+            //      }}
+                
+            //     arrTemp.push(formData);
+            //     localStorage.setItem("dataTotal",JSON.stringify(arrTemp));
+            //     console.log(arrTemp)               
             }
         </script>
 </body>
