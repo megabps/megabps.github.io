@@ -92,7 +92,7 @@ function store(e) {
   var statValue = document.querySelector(
     'input[name="statRadio"]:checked'
   ).value;
-//   var form = localStorage.key;
+  //   var form = localStorage.key;
   var title = document.getElementById("title").value;
   var time = $(".time");
   var desc = $(".desc");
@@ -104,7 +104,7 @@ function store(e) {
 
   e.preventDefault();
   const formData = {
-    cal: dates + " - " + months + " - " + years,
+    cal: dates + " " + months + " " + years,
     statValue: statValue,
     title: title,
     progress: progress,
