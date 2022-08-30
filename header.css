@@ -1098,6 +1098,91 @@ label.radio-button input[type="radio"]+span,label.radio-button input[type="radio
     background-color: #039a00;
     margin-top: 30px;
 }
+.btnRed{
+  /* height:40px;
+  min-width:100px; */
+  border:1px solid transparent;
+  border-radius:3px;color:#fff;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:12px;
+  height:auto;
+  line-height:1.5;
+  min-width:0;
+  padding:5px 10px;
+  background-color: #9a0000;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.btnOrange{
+  /* height:40px;
+  min-width:100px; */
+  background-color: #f7b100;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border:1px solid transparent;
+  border-radius:3px;color:#fff;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:12px;
+  height:auto;
+  line-height:1.5;
+  min-width:0;
+  padding:5px 10px;
+}
+.btnYellow{
+  /* height:40px;
+  min-width:100px; */
+  background-color: #f6ff00;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border:1px solid transparent;
+  border-radius:3px;color:#fff;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:12px;
+  height:auto;
+  line-height:1.5;
+  min-width:0;
+  padding:5px 10px;
+}
+.btnGreen{
+  /* height:40px;
+  min-width:100px; */
+  background-color: #039a00;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border:1px solid transparent;
+  border-radius:3px;color:#fff;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:12px;
+  height:auto;
+  line-height:1.5;
+  min-width:0;
+  padding:5px 10px;
+}
+.btnBlue{
+  /* height:40px;
+  min-width:100px; */
+  background-color: #0095ff;
+  margin-top: 30px;
+  border:1px solid transparent;
+  border-radius:3px;color:#fff;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:12px;
+  height:auto;
+  line-height:1.5;
+  min-width:0;
+  padding:5px 10px;
+  
+}
+.selectFilter{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  height: 40px;
+  width: 200px;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:20px;
+  text-align: center;
+}
 @media(min-width:1024px){.btn-primary:hover,.btn-inline-search:hover{background-color:#e86487}
 }
 .btn-primary:active,.btn-inline-search:active{background-color:#b8123e}
@@ -3276,7 +3361,16 @@ body .container .row .col{padding-left:0;padding-right:0}
 .daterangepicker td.active,.daterangepicker td.active:hover{background-color:#e66688}
 .daterangepicker td.in-range{background-color:#f5ccd7}
 .btn-success.active,.btn-success.focus,.btn-success:active,.btn-success:focus,.btn-success:hover,.open>.dropdown-toggle.btn-success{background-color:#d21849}
-.btn-success{background-color:#d21849;border:1px solid transparent;border-radius:3px;color:#fff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;height:auto;line-height:1.5;min-width:0;padding:5px 10px;text-transform:none}
+.btn-success{
+  background-color:#d21849;
+  border:1px solid transparent;
+  border-radius:3px;color:#fff;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:12px;
+  height:auto;
+  line-height:1.5;
+  min-width:0;
+  padding:5px 10px;text-transform:none}
 .cancelBtn.active,.cancelBtn.focus,.cancelBtn:active,.cancelBtn:focus,.cancelBtn:hover,.open>.dropdown-toggle.cancelBtn{background-color:#5a6c80}
 .cancelBtn{background-color:#5a6c80;border:1px solid #ccc;border-radius:3px;color:#333;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;height:auto;line-height:1.5;min-width:0;padding:5px 10px;text-transform:none}
 .glyphicon{display:inline-block;font-family:'Glyphicons Halflings';font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased}

@@ -14,17 +14,7 @@
     <meta property="og:title" content="AIA Singapore" />
     <meta property="og:description" content="AIA Singapore provides insurance plans for both individuals and businesses. Learn about life insurance, medical protection, investments and the latest updates!" />
     <meta property="og:url" content="https://www.aia.com.sg/en/index.html" />
-    <meta property="og:site_name" content="AIA Singapore" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:image" content="https://www.aia.com.sg/content/dam/sg/open-graph-logo.png" />
-    <meta name="twitter:title" content="AIA Singapore" />
-    <meta name="twitter:description" content="AIA Singapore provides insurance plans for both individuals and businesses. Learn about life insurance, medical protection, investments and the latest updates!" />
-    <meta name="twitter:domain" content="https://www.aia.com.sg/en/index.html" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="facebook-domain-verification" content="m3wja2lwjkfucig2he21b09v7givu4" />
     <link href="header.css" rel="stylesheet" type="text/css">
-    <!-- <link href="bootstrap.css" rel="stylesheet" type="text/css"> -->
-    <!-- <script src="bootstrap.js"></script> -->
     <script src="header.js"></script>
     <script src="footer.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -2186,69 +2176,52 @@
                 <form class="content" id="formDataSubmit">
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div>
-                            <div class="card-cal">
-                                <div class="content">
-                                    
-                                    <h3 id="hari"></h3><br>
-                                    <h1 id="tanggal"></h1><br>
-                                    <h5 id="bln-thn"></h5>
-                                    <hr style="margin-top: 20px; margin-bottom: 20px;">
-                                    <script>
-                                        const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-                                        const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-                                        const d = new Date();
-                                        let hariIni = weekday[d.getDay()];
-                                        let tgl = d.getDate();
-                                        let thn = d.getFullYear();
-                                        let bln = month[d.getMonth()];
-                                        document.getElementById("hari").innerHTML = hariIni;
-                                        document.getElementById("tanggal").innerHTML = tgl;
-                                        document.getElementById("bln-thn").innerHTML = bln+" "+thn;
-                                    </script>
-                                    
-                                    
-                                    <div id="calendar"></div>  
-                                        <script>
-                                        
-                                        </script>
-                                    
-                                </div>
+                        <div class="card-cal">
+                            <div class="content">
+                                <h3 id="hari"></h3><br>
+                                <h1 id="tanggal"></h1><br>
+                                <h5 id="bln-thn"></h5>
+                                <hr style="margin-top: 20px; margin-bottom: 20px;">
+                                <!-- <script src="./todo.js" defer>
+                                   
+                                </script> -->
+                                <div id="calendar"></div>  
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-8 col-sm-6 col-xs-12">
-                    <div>
-                           
-                               <div id="contentTodo" class="content">
-                                <div>
-                                   <div class="lbl"> Status </div>
-                                        <input type="radio" id="rb1" name="statRadio" value="Important" checked> Important&emsp;&emsp;  
-                                        <input type="radio" id="rb2" name="statRadio" value="Not-Important"> Not Important
-                                </div>
-                                <div> 
-                                    <div class="lbl"> Title </div>
-                                        <input id ="title" type="text" placeholder="Title" aria-label="title" name="title">
-                                </div>
-                                <div class="row" style="margin-left: 1px;"> 
-                                    <div class="col-md-2 col-sm-3 col-xs-4" style="padding-left: 1px;padding-bottom: 3px; padding-right: 0;">
+                    <div>                
+                        <div id="contentTodo" class="content">
+                            <div>
+                                <div class="lbl"> Status </div>
+                                <input type="radio" id="rb1" name="statRadio" value="Important" checked> Important&emsp;&emsp;
+                                <input type="radio" id="rb2" name="statRadio" value="Not-Important"> Not Important
+                            </div>
+                            <div>
+                                <div class="lbl"> Title </div>
+                                <input id="title" type="text" placeholder="Title" aria-label="title" name="title">
+                            </div>
+                            <div class="row" style="margin-left: 1px;">
+                                <div class="col-md-2 col-sm-3 col-xs-4"
+                                    style="padding-left: 1px;padding-bottom: 3px; padding-right: 0;">
                                     <div class="lbl"> Time </div>
-                                        <input type="time" aria-label="time" name="time" id="time" class="time">
-                                    </div>
-                                    <div class="col-md-8 col-sm-6 col-xs-12" style="padding-left: 1px;padding-bottom: 1px;">
+                                    <input type="time" aria-label="time" name="time" id="time" class="time">
+                                </div>
+                                <div class="col-md-8 col-sm-6 col-xs-12" style="padding-left: 1px;padding-bottom: 1px;">
                                     <div class="lbl"> Description </div>
-                                        <div class="input-group mb-3">
-                                            <input type="text" id="descTodo" name="descTodo" class="form-control descTodo desc" placeholder="Desc your to-do list">                                            
-                                            <div class="input-group-append">
-                                                <button id="addBtn" class="btn btn-success addBtn" style="background-color: rgb(32, 160, 0);" type="submit">+</button>
-                                            </div>
-                                          </div>
+                                    <div class="input-group mb-3">
+                                        <input type="text" id="descTodo" name="descTodo" class="form-control descTodo desc"
+                                            placeholder="Desc your to-do list">
+                                        <div class="input-group-append">
+                                            <button id="addBtn" class="btn btn-success addBtn"
+                                                style="background-color: #20a000;" type="submit">+</button>
+                                        </div>
                                     </div>
                                 </div>
-                                
-                               </div>
-                               <button class="btn btn-default btn-primary btn-stretch" type="submit" style="width: 450px; margin-top: 20px;" >Create To-Do List</button>
-                            
+                            </div>                
+                        </div>
+                        <button class="btn btn-default btn-primary btn-stretch" type="submit" style="width: 450px; margin-top: 20px;">Create To-Do List</button>                
                     </div>
                 </div>
             </form>
@@ -2284,7 +2257,6 @@
                         <h4 class="margin-bottom-s margin-bottom-sm-l b3"><a href="https://outlook.office365.com/owa/calendar/AIACustomerServiceCentre@aiacom.onmicrosoft.com/bookings/" target="_blank">BOOK AN APPOINTMENT</a></h4>
                     </div>
                 </div>
-
                 <div class="sub-title">    
                     <h5 class="h5 text-left b5 margin-bottom-md-l margin-bottom-sm-l margin-top-l">GO TO</h5>  
                 </div>
@@ -2336,7 +2308,6 @@
                                     </div>
                             </div>
                         </div>
-
                     </div>
                     </div>
                 </div>
@@ -2575,13 +2546,13 @@
 </div>
 <!-- END FOOTER -->
         </div>
-        <script>
-            $(document).ready(function() {
+        <!-- <script>
+            $(document).ready(function () {
                 var max_fields = 10;
                 var wrapper = document.getElementById("contentTodo");
                 var add_button = document.getElementById("addBtn");
                 var x = 1;
-                $(add_button).click(function(e) {
+                $(add_button).click(function (e) {
                     e.preventDefault();
                     if (x < max_fields) {
                         x++;
@@ -2591,7 +2562,7 @@
                         alert('You Reached the limits')
                     }
                 });
-                $(wrapper).on("click", ".removeBtn", function(e) {
+                $(wrapper).on("click", ".removeBtn", function (e) {
                     e.preventDefault();
                     $(this).parent('div').remove();
                     x--;
@@ -2603,36 +2574,53 @@
                 todayHighlight: true
             });
             $('#formDataSubmit').on('submit', store)
-            function store(e){
-                var cal = $('#calendar'). datepicker('getDate');
+            function store(e) {
+                var cal = $('#calendar').datepicker('getDate');
                 var statValue = document.querySelector('input[name="statRadio"]:checked').value;
                 var form = localStorage.key;
                 var title = document.getElementById("title").value;
-                 var time = $(".time");
-                 var desc = $(".desc");
-                 var arrDesc=[]                
-                 for(var i=0; i<time.length;i++){
-                    arrDesc.push({time: time[i].value, desc: desc[i].value})
-                 }
+                var time = $(".time");
+                var desc = $(".desc");
+                var progress= 0;
+                var arrDesc = []
+                for (var i = 0; i < time.length; i++) {
+                    arrDesc.push({ time: time[i].value, desc: desc[i].value })
+                }
 
-            //     e.preventDefault();
-            //     const formData = {
-            //         cal: cal,
-            //         statValue: statValue ,
-            //         title: title,
-            //         des:arrDesc
-            //     }
-            //     var temp = JSON.parse(localStorage.getItem("dataTotal"))??[];
-            //     var arrTemp =[]
-            //     if(temp.length > 0){ 
-            //         for(var i=0; i<temp.length; i++){
-            //         arrTemp.push(temp[i])
-            //      }}
-                
-            //     arrTemp.push(formData);
-            //     localStorage.setItem("dataTotal",JSON.stringify(arrTemp));
-            //     console.log(arrTemp)               
+                e.preventDefault();
+                const formData = {
+                    cal: cal,
+                    statValue: statValue,
+                    title: title,
+                    progress: progress,
+                    des: arrDesc
+                }
+                var temp = JSON.parse(localStorage.getItem("dataTotal")) ?? [];
+                var arrTemp = []
+                if (temp.length > 0) {
+                    for (var i = 0; i < temp.length; i++) {
+                        arrTemp.push(temp[i])
+                    }
+                }
+
+                arrTemp.push(formData);
+                localStorage.setItem("dataTotal", JSON.stringify(arrTemp));
+                console.log(arrTemp)
+                // const dataToDoList=[]        
+                // dataToDoList.push(formData)
+                //     if (localStorage.getItem("aia-to-do-list") === null) {
+                //         localStorage.setItem('aia-to-do-list', JSON.stringify(dataToDoList));
+                //     }
+                //     else {
+                //         const temp = JSON.parse(localStorage.getItem("aia-to-do-list")) ?? [];
+                //         for (let i = 0; i < temp.length; i++) {
+                //             dataToDoList.push(temp[i])
+                //             localStorage.setItem('aia-to-do-list', JSON.stringify(dataToDoList));
+                //         }
+
+                //     }
             }
-        </script>
+        </script> -->
 </body>
+<script src="./todo.js"></script>
 </html>   
